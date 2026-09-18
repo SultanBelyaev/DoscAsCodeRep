@@ -1,0 +1,14 @@
+@startuml
+actor Bob #red
+' Единственная разница между actor
+' и participant - это разная форма отображения
+participant Alice
+participant "У меня очень\nдлинное имя" as L #99FF99
+/' Эта строчка будет обозначать тоже самое:
+   participant L as "У меня очень\nдлинное имя"  #99FF99
+  '/
+
+Alice->Bob: Authentication Request
+Bob->Alice: Authentication Response
+Bob->L: Log transaction
+@enduml
